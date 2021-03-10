@@ -49,7 +49,7 @@
         </script>
     </template:addResources>
 
-                    <a class="btn-dark button-large ${cssClass}" href="#"
+                    <a href="#"
                             <c:if test="${not renderContext.editMode}"> onclick="connectToGithub${fn:replace(currentNode.identifier, '-', '')}();return false;" </c:if>
                             <c:if test="${not empty htmlId}"> id="${htmlId}"</c:if>
                        <c:if test="${renderContext.editMode}">disabled</c:if> >
