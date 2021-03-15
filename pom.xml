@@ -53,14 +53,14 @@
   </parent>
   <groupId>org.se.modules</groupId>
   <artifactId>bootstrap-social-login</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Bootstrap Social Login</name>
   <description>This is the custom module (Bootstrap Social Login) for running on a Jahia server.</description>
   <scm>
     <connection>scm:git:https://github.com/smonier/bootstrap-social-login.git</connection>
     <developerConnection>scm:git:https://github.com/smonier/bootstrap-social-login.git</developerConnection>
-    <tag>1_0_0</tag>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <require-capability>osgi.extender;filter:="(osgi.extender=org.jahia.bundles.blueprint.extender.config)"</require-capability>
