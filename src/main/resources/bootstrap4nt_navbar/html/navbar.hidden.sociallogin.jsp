@@ -22,7 +22,7 @@
 
 <c:set var="loginMenuULClass" value="${currentNode.properties.loginMenuULClass.string}"/>
 <c:if test="${empty loginMenuULClass}">
-    <c:set var="loginMenuULClass" value="navbar-nav d-none d-md-flex"/>
+    <c:set var="loginMenuULClass" value="navbar-nav pl-md-5 mr-auto"/>
 </c:if>
 <c:choose>
     <c:when test="${renderContext.loggedIn}">
@@ -131,19 +131,21 @@
                     <hr class="mt-3 mb-3"/>
                     <div class="text-center text-muted delimiter">or use a social network</div>
                     <div class="d-flex justify-content-center social-buttons">
-                        <c:if test="${b4soc:validateSocialNetwork('LinkedInApi20',sitekey)}">
-                            <template:include view="hidden.sociallogin.linkedInButton"/>
-                        </c:if>
-                        <c:if test="${b4soc:validateSocialNetwork('FacebookApi',sitekey)}">
-                            <template:include view="hidden.sociallogin.facebookButton"/>
-                        </c:if>
-                        <c:if test="${b4soc:validateSocialNetwork('GitHubApi',sitekey)}">
-                            <template:include view="hidden.sociallogin.githubButton"/>
-                        </c:if>
-                        <c:if test="${b4soc:validateSocialNetwork('GoogleApi20',sitekey)}">
-                            <template:include view="hidden.sociallogin.googleButton"/>
-                        </c:if>
+                        <c:if test="${ renderContext.liveMode}">
 
+                            <c:if test="${b4soc:validateSocialNetwork('LinkedInApi20',sitekey)}">
+                                <template:include view="hidden.sociallogin.linkedInButton"/>
+                            </c:if>
+                            <c:if test="${b4soc:validateSocialNetwork('FacebookApi',sitekey)}">
+                                <template:include view="hidden.sociallogin.facebookButton"/>
+                            </c:if>
+                            <c:if test="${b4soc:validateSocialNetwork('GitHubApi',sitekey)}">
+                                <template:include view="hidden.sociallogin.githubButton"/>
+                            </c:if>
+                            <c:if test="${b4soc:validateSocialNetwork('GoogleApi20',sitekey)}">
+                                <template:include view="hidden.sociallogin.googleButton"/>
+                            </c:if>
+                        </c:if>
                     </div>
                 </div>
             </div>
